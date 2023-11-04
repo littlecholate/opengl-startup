@@ -26,16 +26,16 @@ if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
     endif()
 endif()
 
-# add path to subdirectory CMakeLists
-add_subdirectory(external/glfw) # window oppener
+# add paths to subdirectory CMakeLists
+add_subdirectory(external/glfw) # window opener
 add_subdirectory(external/glad) # opengl loader
 
-# get the source files path
+# get source files path
 # define MY_SOURCES to be a list of all the source files 
 file(GLOB_RECURSE MY_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 target_sources("${CMAKE_PROJECT_NAME}" PRIVATE ${MY_SOURCES})
 
-# get the assets path, uncomment second line for release version
+# get the assets path, uncomment the second line for the release version
 # see the https://www.youtube.com/watch?v=A735Y4kMIPM
 target_compile_definitions("${CMAKE_PROJECT_NAME}" PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/res/") 
 #target_compile_definitions("${CMAKE_PROJECT_NAME}" PUBLIC RESOURCES_PATH="./resources/") 
