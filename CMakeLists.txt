@@ -28,6 +28,7 @@ endif()
 
 # add path to subdirectory CMakeLists
 add_subdirectory(external/glfw) # window oppener
+add_subdirectory(external/glad) # opengl loader
 
 # get the source files path
 # define MY_SOURCES to be a list of all the source files 
@@ -42,4 +43,4 @@ target_compile_definitions("${CMAKE_PROJECT_NAME}" PUBLIC RESOURCES_PATH="${CMAK
 # get the .h files path
 # target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src/Engine/")
 
-target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glfw)
+target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glfw glad)
