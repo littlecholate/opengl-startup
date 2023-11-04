@@ -1,6 +1,7 @@
 ## Cross-platform OpenGL startup with glad and glfw3
 
 Tiny project when learning cmake, only create a window with glad and glfw to keep everything simple.
+Code in src/main.cpp is directly copied from the [tutorial](https://learnopengl.com/Getting-started/Hello-Window).
 
 ## How to use
 
