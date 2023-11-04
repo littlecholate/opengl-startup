@@ -14,7 +14,7 @@ add_executable("${CMAKE_PROJECT_NAME}")
 # update all the submodules
 find_package(GIT QUIET)
 if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
-    option(GIT_SUBMODULE "Check submodules during build" OFF)
+    option(GIT_SUBMODULE "Check submodules during build" ON)
     if(GIT_SUBMODULE)
         message(STATUS "Submodule update")
         execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive

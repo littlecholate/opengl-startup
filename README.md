@@ -8,7 +8,8 @@ Code in src/main.cpp is directly copied from the [tutorial](https://learnopengl.
 #### Windows
 
 ```
-mkdir build && cd build
+mkdir build
+cd build
 cmake -G "MinGW Makefiles" ..
 mingw32-make
 .\opengl-startup.exe
@@ -17,7 +18,8 @@ mingw32-make
 #### Linux
 
 ```
-mkdir build && cd build
+mkdir build
+cd build
 cmake ..
 make
 ./opengl-startup
