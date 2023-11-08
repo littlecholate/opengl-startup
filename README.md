@@ -9,9 +9,9 @@ Code in src/main.cpp is directly copied from the [tutorial](https://learnopengl.
 #### Windows
 
 ```
+git submodule update --init --recursive
 mkdir build
 cd build
-git submodule update --init --recursive
 cmake -G "MinGW Makefiles" ..
 mingw32-make
 .\opengl-startup.exe
@@ -20,9 +20,9 @@ mingw32-make
 #### Linux
 
 ```
+git submodule update --init --recursive
 mkdir build
 cd build
-git submodule update --init --recursive
 cmake ..
 make
 ./opengl-startup
